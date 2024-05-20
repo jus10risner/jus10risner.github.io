@@ -46,7 +46,7 @@
                 line-height: 20px;
             }
             h2 {
-                margin-top: 40px;
+                margin-top: 60px;
             }
             p {
                 line-height: 25px;
@@ -61,13 +61,19 @@
             .body-image {
                 display: inline-block;
                 max-width: 40%;
+                min-width: 150px;
                 height: auto;
+                width: auto;
             }
             .image-container {
                 display: flex;
                 justify-content: space-between;
                 overflow-x: auto;
                 white-space: nowrap;
+                padding-left: 20px;
+                padding-right: 20px;
+                background: #222;
+                border-radius: 10px;
             }
             .image-container::-webkit-scrollbar {
                 width: 10px;
@@ -75,16 +81,17 @@
 
             .image-container::-webkit-scrollbar-track {
                 background: #222;
-                border-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
             }
 
             .image-container::-webkit-scrollbar-thumb {
-                background: #555;
+                background: #444;
                 border-radius: 10px;
             }
 
             .image-container::-webkit-scrollbar-thumb:hover {
-                background: #444;
+                background: #333;
             }
         </style>
     </head>
@@ -92,7 +99,7 @@
         <div class="container">
             <header>
                 <img
-                    src="https://jus10risner.github.io/docs/assets/socket-app-icon.png"
+                    src="jus10risner.github.io/docs/assets/socket-app-icon.png"
                     alt="Socket App Icon"
                     class="header-image" />
             </header>
@@ -100,27 +107,26 @@
                 <div id="intro">
                     <h1>Socket</h1>
                     <p>
-                        A clean, simple car care tracker, that looks and feels
+                        A simple, easy-to-use car care tracker, that looks and feels
                         right at home on iPhone.
                     </p>
                     <p>
                         Socket helps you keep your vehicles in good working
                         order, while respecting your privacy. Whether you’re a
                         car enthusiast or someone who just wants to keep their
-                        vehicle in good shape for as long as possible, you've
-                        found the right app.
+                        vehicle on the road for as long as possible, this app is for you.
                     </p>
                     <div class="image-container">
                         <img
-                            src="https://jus10risner.github.io/docs/assets/socket-site-image1.png"
+                            src="jus10risner.github.io/docs/assets/socket-site-image1.png"
                             alt="Socket Display Image"
                             class="body-image" />
                         <img
-                            src="https://jus10risner.github.io/docs/assets/socket-site-image2.png"
+                            src="jus10risner.github.io/docs/assets/socket-site-image2.png"
                             alt="Socket Display Image"
                             class="body-image" />
                         <img
-                            src="https://jus10risner.github.io/docs/assets/socket-site-image3.png"
+                            src="jus10risner.github.io/docs/assets/socket-site-image3.png"
                             alt="Socket Display Image"
                             class="body-image" />
                     </div>
@@ -146,7 +152,7 @@
                         Have questions or feedback? Send an email to
                         <a
                             href="mailto:socketsupport@justinrisner.com"
-                            style="color: white; text-decoration: none"
+                            style="color: cyan; text-decoration: none"
                             >socketsupport@justinrisner.com</a
                         >.
                     </p>
