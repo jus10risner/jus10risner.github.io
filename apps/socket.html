@@ -1,126 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Socket</title>
-  <style>
-    /* Basic CSS for layout */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      color: white;
-    }
-    header {
-      background-color: black;
-      padding: 20px;
-      text-align: center;
-    }
-    header a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    header a:hover {
-      text-decoration: underline;
-    }
-    p {
-      line-height: 20px;
-      color: #999;
-    }
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    .section {
-      line-height: 10px;
-      margin-bottom: 40px;
-    }
-    section.type-a {
-      line-height: 10px;
-      margin-bottom: 50px;
-    }
-    h1 {
-      font-size: 40px;
-    }
-    nav {
-      float: left;
-      width: 20%;
-      padding: 20px;
-      /*box-sizing: border-box;*/
-      height: 100vh;
-      overflow-y: auto;
-    }
-    nav a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 10px 0;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    /* CSS for interactive elements */
-    .interactive-button {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .interactive-button:hover {
-      background-color: #0056b3;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-    @media only screen and (max-width: 600px) {
-        nav {
-            display: none;
-        }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <a href="#section1">About</a>
-    <a href="#section2">Contact</a>
-  </header>
-  <nav>
-    <ul>
-        <a href="#section1">Section 1</a>
-        <a href="#section2">Privacy Policy</a>
-        <a href="#section3">Contact</a>
-    </ul>
-</nav>
-  <div class="container">
-    <section class="type-a">
-        <h1>Socket</h1>
-        <p>A clean, simple car care tracker, that looks and feels right at home on iPhone.</p>
-    </section>
-    <section id="section1" class="section">
-      <h2>Section 1</h2>
-      <p>This is the first section of the website.</p>
-      <div class="center">
-                <img src="placeholder1.jpg" alt="Placeholder Image 1">
-                <img src="placeholder2.jpg" alt="Placeholder Image 2">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Single Page Website</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: black;
+                color: white;
+            }
+            .container {
+                max-width: 768px;
+                min-width: 250px;
+                margin: 0 auto;
+                padding: 40px;
+                color: #fff;
+                position: relative;
+            }
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .content {
+                margin-top: 50px;
+                overflow: hidden;
+            }
+            @media (min-width: 768px) {
+                nav {
+                    display: block;
+                }
+                .table-of-contents {
+                    display: block;
+                }
+            }
+            h1 {
+                font-size: 40px;
+                line-height: 20px;
+            }
+            h2 {
+                margin-top: 40px;
+            }
+            p {
+                line-height: 25px;
+                color: #999;
+                margin-bottom: 20px;
+            }
+            .header-image {
+                max-width: 20%;
+                min-width: 100px;
+                height: auto;
+            }
+            .body-image {
+                display: inline-block;
+                max-width: 40%;
+                height: auto;
+            }
+            .image-container {
+                display: flex;
+                justify-content: space-between;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            .image-container::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            .image-container::-webkit-scrollbar-track {
+                background: #222;
+                border-radius: 10px;
+            }
+
+            .image-container::-webkit-scrollbar-thumb {
+                background: #555;
+                border-radius: 10px;
+            }
+
+            .image-container::-webkit-scrollbar-thumb:hover {
+                background: #444;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img
+                    src="https://jus10risner.github.io/docs/assets/socket-app-icon.png"
+                    alt="Socket App Icon"
+                    class="header-image" />
+            </header>
+            <div class="content">
+                <div id="intro">
+                    <h1>Socket</h1>
+                    <p>
+                        A clean, simple car care tracker, that looks and feels
+                        right at home on iPhone.
+                    </p>
+                    <p>
+                        Socket helps you keep your vehicles in good working
+                        order, while respecting your privacy. Whether you’re a
+                        car enthusiast or someone who just wants to keep their
+                        vehicle in good shape for as long as possible, you've
+                        found the right app.
+                    </p>
+                    <div class="image-container">
+                        <img
+                            src="https://jus10risner.github.io/docs/assets/socket-site-image1.png"
+                            alt="Socket Display Image"
+                            class="body-image" />
+                        <img
+                            src="https://jus10risner.github.io/docs/assets/socket-site-image2.png"
+                            alt="Socket Display Image"
+                            class="body-image" />
+                        <img
+                            src="https://jus10risner.github.io/docs/assets/socket-site-image3.png"
+                            alt="Socket Display Image"
+                            class="body-image" />
+                    </div>
+                </div>
+                <div id="privacy-policy">
+                    <h2>Privacy Policy</h2>
+                    <p>
+                        Socket respects your privacy and is designed to protect
+                        any information you provide. No personal information is
+                        collected, and we do not gather or share any data about
+                        your usage, location, or identity.
+                    </p>
+                    <p>
+                        If you have any questions or concerns regarding our
+                        privacy practices, please contact us at the email
+                        address below.
+                    </p>
+                    <p>Last updated: 05/20/2024</p>
+                </div>
+                <div id="contact">
+                    <h2>Contact</h2>
+                    <p>
+                        Have questions or feedback? Send an email to
+                        <a
+                            href="mailto:socketsupport@justinrisner.com"
+                            style="color: white; text-decoration: none"
+                            >socketsupport@justinrisner.com</a
+                        >.
+                    </p>
+                </div>
             </div>
-    </section>
-    <section id="section2" class="section">
-      <h2>Privacy Policy</h2>
-      <p>Socket respects your privacy and is committed to protecting any information you provide. Our app does not collect any personal information from users. We do not gather, store, or share any data about your usage, device, or identity. We prioritize your privacy and strive to maintain a transparent and secure experience throughout your use of our app.</p>
-      <p>If you have any questions or concerns regarding our privacy practices, please contact us at the email address below.</p>
-      <p>Last updated: 05/17/2024</p>
-    </section>
-    <section class="section">
-      <h2>Contact</h2>
-      <p>Have questions or feedback? Send an email to <a href="mailto:socketsupport@justinrisner.com">socketsupport@justinrisner.com</a>.</p>
-    </section>
-  </div>
-</body>
+        </div>
+
+        <script>
+            function changeSelected(element) {
+                var currentSelected = document.querySelector("nav a.selected");
+                if (currentSelected) {
+                    currentSelected.classList.remove("selected");
+                }
+                element.classList.add("selected");
+            }
+        </script>
+    </body>
 </html>
