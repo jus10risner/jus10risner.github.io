@@ -1,115 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Justin Risner</title>
-  <style>
-    /* Basic CSS for layout */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      color: white;
-    }
-    header {
-      background-color: black;
-      padding: 20px;
-      text-align: center;
-    }
-    header a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-    header a:hover {
-      text-decoration: underline;
-    }
-    p {
-      color: #999;
-    }
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    .section {
-      line-height: 10px;
-      margin-bottom: 40px;
-    }
-    section.type-a {
-      line-height: 10px;
-      margin-bottom: 50px;
-    }
-    h1 {
-      font-size: 40px;
-    }
-    nav {
-      float: left;
-      width: 20%;
-      padding: 20px;
-      /*box-sizing: border-box;*/
-      height: 100vh;
-      overflow-y: auto;
-    }
-    nav a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 10px 0;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    /* CSS for interactive elements */
-    .interactive-button {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .interactive-button:hover {
-      background-color: #0056b3;
-    }
-    @media only screen and (max-width: 600px) {
-        nav {
-            display: none;
-        }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <a href="#section1">About</a>
-    <a href="#section2">Contact</a>
-  </header>
-  <nav>
-    <ul>
-        <a href="#section1">Section 1</a>
-        <a href="#section2">Section 2</a>
-        <a href="#section3">Section 3</a>
-    </ul>
-</nav>
-  <div class="container">
-    <section class="type-a">
-        <h1>Hi, I'm Justin</h1>
-        <p>I'm a former UX designer, who now makes apps.</p>
-    </section>
-    <section id="section1" class="section">
-      <h2>Section 1</h2>
-      <p>This is the first section of the website.</p>
-    </section>
-    <section id="section2" class="section">
-      <h2>Section 2</h2>
-      <p>This is the second section of the website.</p>
-    </section>
-    <section class="section">
-      <h2>Section 3</h2>
-      <p>This is the third section of the website.</p>
-    </section>
-  </div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Single Page Website</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: black;
+            }
+            .container {
+                max-width: 768px;
+                min-width: 300px;
+                margin: 0 auto;
+                padding: 20px;
+                color: #fff;
+                position: relative;
+            }
+            .header {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: calc(100% - 40px);
+                color: #fff;
+                padding: 10px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .title {
+                display: none;
+            }
+            .content {
+                margin-top: 80px;
+                overflow: hidden;
+            }
+            .image {
+                max-width: 100%;
+                height: auto;
+                text-align: center;
+                border-radius: 10px;
+            }
+            .image-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 50px;
+                /*padding: 20px;*/
+                box-sizing: border-box;
+                margin: 0 auto;
+            }
+            .image-headline {
+                margin: 0;
+                padding-left: 20px;
+                padding-top: 10px;
+                color: #fff;
+                text-align: left;
+                font-size: 20px;
+            }
+            .image-subheadline {
+                margin: 0;
+                padding-left: 20px;
+                color: #999;
+                text-align: left;
+            }
+            @media (min-width: 600px) {
+                .title {
+                    display: block;
+                }
+                .links {
+                    justify-content: flex-end; /* Align links to the right */
+                }
+            }
+
+            @media (max-width: 600px) {
+                .links {
+                    display: flex;
+                    gap: 20px;
+                    justify-content: center; /* Center links */
+                    flex-grow: 1; /* Allows links to occupy remaining space */
+                }
+            }
+
+            .links a {
+                padding: 15px;
+                text-decoration: none;
+                color: #fff;
+            }
+
+            .links a {
+                padding: 10px;
+                text-decoration: none;
+                color: #fff;
+                position: relative;
+                transition: color 0.3s ease;
+            }
+
+            .links a::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: transparent;
+                bottom: -2px;
+                left: 0;
+                transition: background-color 0.3s ease;
+            }
+
+            .links a:hover {
+                color: #fff; /* Change color on hover */
+            }
+
+            .links a:hover::after {
+                background-color: #fff; /* Change underline color on hover */
+            }
+            h1 {
+                font-size: 30px;
+                line-height: 20px;
+            }
+            h2 {
+                margin-top: 40px;
+            }
+            p {
+                line-height: 25px;
+                color: #999;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="title"><h1>Justin Risner</h1></div>
+                <div class="links">
+                    <a href="mailto:socketsupport@justinrisner.com">Contact</a>
+                </div>
+            </header>
+            <div class="content">
+                <div id="intro">
+                    <h1>Hi, I'm Justin</h1>
+                    <p>I'm a former UX designer, who now makes apps.</p>
+                </div>
+                <div id="apps">
+                    <h2>Apps</h2>
+                    <div class="image-container">
+                        <div class="image">
+                            <a href="https://jus10risner.github.io/apps/socket">
+                                <img
+                                    src="https://jus10risner.github.io/docs/assets/socket-link-image.png"
+                                    alt="Socket Screenshots"
+                                    class="image" />
+                            </a>
+                            <p class="image-headline">Socket</p>
+                            <p class="image-subheadline">
+                                A simple, easy-to-use car care tracker, made
+                                with SwiftUI
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
