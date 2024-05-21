@@ -4,7 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Single Page Website</title>
-        <link rel="preload" href="https://jus10risner.github.io/docs/assets/socket-link-image.png" as="image" />
+        <link
+            rel="preload"
+            href="https://jus10risner.github.io/docs/assets/socket-link-image.png"
+            as="image" />
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -47,7 +50,7 @@
                 padding-top: 50px;
                 box-sizing: border-box;
                 margin: 0 auto;
-                max-width: 400px;
+                max-width: 500px;
             }
             .grid-item {
                 min-width: 300px;
@@ -55,6 +58,7 @@
                 margin: 0;
             }
             /*
+             * This will be used when there is more than one item in the grid; otherwise, it just keeps the single grid item left-justified
             @media (min-width: 700px) {
                 .grid-container {
                     grid-template-columns: repeat(2, 1fr);
@@ -78,7 +82,7 @@
             }
 
             .links a {
-                padding: 10px;
+                padding: 5px;
                 text-decoration: none;
                 color: #fff;
                 position: relative;
@@ -99,9 +103,12 @@
             .links a:hover::after {
                 background-color: #fff; /* Change underline color on hover */
             }
-            h1 {
-                font-size: 30px;
+            .header h1 {
+                font-size: 20px;
                 line-height: 20px;
+            }
+            h1 {
+                line-height: 10px;
             }
             h2 {
                 margin-top: 40px;
@@ -124,7 +131,10 @@
             <div class="content">
                 <div id="intro">
                     <h1>Hi, I'm Justin</h1>
-                    <p>I'm a former UX designer, who now makes apps.</p>
+                    <p>
+                        I used to design great user experiences at Big Ass Fans.
+                        Now I write apps, with great user experience at their core.
+                    </p>
                 </div>
                 <div id="apps">
                     <div class="grid-container">
