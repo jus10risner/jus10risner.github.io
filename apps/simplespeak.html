@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SimpleSpeak</title>
+        <link
+            rel="preload"
+            href="https://jus10risner.github.io/docs/assets/simplespeak-app-icon.png"
+            as="image" />
+        <link
+            rel="preload"
+            href="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&amp;releaseDate=1276560000&h=7e7b68fad19738b5649a1bfb78ff46e9"
+            as="image" />
+        <link
+            rel="preload"
+            href="https://jus10risner.github.io/docs/assets/simplespeak-site-image1.png"
+            as="image" />
+        <link
+            rel="preload"
+            href="https://jus10risner.github.io/docs/assets/simplespeak-site-image2.png"
+            as="image" />
+        <link
+            rel="preload"
+            href="https://jus10risner.github.io/docs/assets/simplespeak-site-image3.png"
+            as="image" />
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: black;
+                color: white;
+            }
+            .container {
+                max-width: 768px;
+                min-width: 250px;
+                margin: 0 auto;
+                padding: 40px;
+                color: #fff;
+                position: relative;
+            }
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .content {
+                margin-top: 50px;
+                overflow: hidden;
+            }
+            @media (min-width: 768px) {
+                nav {
+                    display: block;
+                }
+                .table-of-contents {
+                    display: block;
+                }
+            }
+            h1 {
+                font-size: 40px;
+                line-height: 20px;
+            }
+            h2 {
+                margin-top: 60px;
+            }
+            p {
+                line-height: 25px;
+                color: #999;
+                margin-bottom: 20px;
+            }
+            .header-image {
+                max-width: 20%;
+                min-width: 100px;
+                height: auto;
+                padding-bottom: 20px;
+            }
+            .body-image {
+                display: inline-block;
+                max-width: 40%;
+                min-width: 150px;
+                height: auto;
+                width: auto;
+            }
+            .image-container {
+                display: flex;
+                justify-content: space-between;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-left: 20px;
+                padding-right: 20px;
+                background: #222;
+                border-radius: 10px;
+            }
+            .image-container::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            .image-container::-webkit-scrollbar-track {
+                background: #222;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            .image-container::-webkit-scrollbar-thumb {
+                background: #444;
+                border-radius: 10px;
+            }
+
+            .image-container::-webkit-scrollbar-thumb:hover {
+                background: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img
+                    src="https://jus10risner.github.io/docs/assets/simplespeak-app-icon.png"
+                    alt="SimpleSpeak App Icon"
+                    class="header-image" />
+                <div>
+                    <a href="https://apps.apple.com/app/id6502462009"
+                        ><img
+                            src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83&amp;releaseDate=1276560000&h=7e7b68fad19738b5649a1bfb78ff46e9"
+                            alt="Download on the App Store"
+                    /></a>
+                </div>
+            </header>
+            <div class="content">
+                <div id="intro">
+                    <h1>SimpleSpeak</h1>
+                    <p>
+                        SimpleSpeak empowers users who have lost the ability to speak by making communication easy and intuitive.
+                    </p>
+                    <p>
+                        The customizable interface allows you to add and organize your own phrases, as well as pre-made options, and speak them with a tap. With SimpleSpeak, communication is always at your fingertips.
+                    </p>
+                    <div class="image-container">
+                        <img
+                            src="https://jus10risner.github.io/docs/assets/simplespeak-site-image1.png"
+                            alt="SimpleSpeak Display Image"
+                            class="body-image" />
+                        <img
+                            src="https://jus10risner.github.io/docs/assets/simplespeak-site-image2.png"
+                            alt="SimpleSpeak Display Image"
+                            class="body-image" />
+                        <img
+                            src="https://jus10risner.github.io/docs/assets/simplespeak-site-image3.png"
+                            alt="SimpleSpeak Display Image"
+                            class="body-image" />
+                    </div>
+                </div>
+                <div id="privacy-policy">
+                    <h2>Privacy Policy</h2>
+                    <p>
+                        SimpleSpeak respects your privacy and is designed to protect
+                        any information you provide. No personal information is
+                        collected, and we do not gather or share any data about
+                        your usage, location, or identity.
+                    </p>
+                    <p>
+                        If you have any questions or concerns regarding our
+                        privacy practices, please contact us at the email
+                        address below.
+                    </p>
+                    <p>Last updated: 05/20/2024</p>
+                </div>
+                <div id="contact">
+                    <h2>Contact</h2>
+                    <p>
+                        Have questions or feedback? Send an email to
+                        <a
+                            href="mailto:feedback@justinrisner.com"
+                            style="color: cyan; text-decoration: none"
+                            >feedback@justinrisner.com</a
+                        >.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function changeSelected(element) {
+                var currentSelected = document.querySelector("nav a.selected");
+                if (currentSelected) {
+                    currentSelected.classList.remove("selected");
+                }
+                element.classList.add("selected");
+            }
+        </script>
+    </body>
+</html>
