@@ -6,6 +6,10 @@
         <title>Justin Risner</title>
         <link
             rel="preload"
+            href="https://jus10risner.github.io/docs/assets/simplespeak-web-image.png"
+            as="image" />
+        <link
+            rel="preload"
             href="https://jus10risner.github.io/docs/assets/socket-link-image.png"
             as="image" />
         <style>
@@ -57,15 +61,13 @@
                 width: 100%;
                 margin: 0;
             }
-            /*
-             * This will be used when there is more than one item in the grid; otherwise, it just keeps the single grid item left-justified
+/*              * This will be used when there is more than one item in the grid; otherwise, it just keeps the single grid item left-justified */
             @media (min-width: 700px) {
                 .grid-container {
                     grid-template-columns: repeat(2, 1fr);
                     max-width: 100%
                 }
             }
-            */
             .grid-container h2 {
                 margin: 0;
                 padding-top: 5px;
@@ -146,6 +148,21 @@
                         <div class="grid-item">
                             <div class="image">
                                 <a
+                                    href="https://jus10risner.github.io/apps/simplespeak">
+                                    <img
+                                        src="https://jus10risner.github.io/docs/assets/simplespeak-web-image.png"
+                                        alt="SimpleSpeak Screenshots"
+                                        class="image" />
+                                </a>
+                            </div>
+                            <h2>SimpleSpeak</h2>
+                            <p>
+                                An easy-to-use AAC app for individuals who have lost the ability to speak
+                            </p>
+                        </div>
+                        <div class="grid-item">
+                            <div class="image">
+                                <a
                                     href="https://jus10risner.github.io/apps/socket">
                                     <img
                                         src="https://jus10risner.github.io/docs/assets/socket-link-image.png"
@@ -155,8 +172,7 @@
                             </div>
                             <h2>Socket</h2>
                             <p>
-                                A simple, easy-to-use car care tracker, made
-                                with SwiftUI
+                                A simple, user-friendly car care tracker, made with SwiftUI
                             </p>
                         </div>
                     </div>
